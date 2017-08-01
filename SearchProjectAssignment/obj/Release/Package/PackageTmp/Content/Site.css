@@ -1,0 +1,265 @@
+﻿.navbar-header.col-md-1.img {
+margin-right:-80px;
+margin-left:0px;
+}
+
+.topLabel {
+background:rgba(0,0,0,0);
+border:none;
+border-right:2px solid;
+color:#fff;
+padding-top:5px;
+padding-bottom:5px;
+text-align:center;
+width:100px;
+}
+
+.topLabel2 {
+background:rgba(0,0,0,0);
+border:none;
+color:#fff;
+text-align:center;
+width:100px;
+}
+
+.topLabel3 {
+background:rgba(0,0,0,0);
+border:1px solid;
+color:#fff;
+height:40px;
+padding:0px;
+
+}
+
+div.col-md-offset-2.col-md-5.pull-right.export{
+width:auto;
+font-size: 12px;
+margin-left:0px;
+margin-top:10px;
+}
+
+
+.ctab {
+     
+    padding-top:20px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#50b4fc+0,1188e2+100 */
+    background: #50b4fc; /* Old browsers */
+    background: -moz-linear-gradient(top, #50b4fc 0%, #1188e2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #50b4fc 0%,#1188e2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #50b4fc 0%,#1188e2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50b4fc', endColorstr='#1188e2',GradientType=0 ); /* IE6-9 */
+    
+}
+ .ctab li a{
+        color:#fff;
+        font-weight:800;
+        border:1px solid #ccc;
+        margin-left:7px;
+        
+    }
+
+ .ctab li a.history{
+        color:#fff;
+        font-weight:800;
+        border:none;
+        margin-left:7px;
+        
+    }
+    .ctab li.active a, .ctab li a:hover{
+        color:#333;
+        font-weight:800;
+    }
+
+    .dropdown-menu.tabLink{
+        color:black;
+        font-weight:800;
+        background-color:#3192D7;
+    }
+
+.navbar-default {
+    background-color: #3192D7;
+    margin-bottom: 0 !important;
+}
+
+ul.navbar-nav li.dropdown a {
+    color: #fff;
+}
+
+ul.navbar-nav li.dropdown.open a {
+    color: #333;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+    text-align: center;
+}
+
+.dataTables_length {
+    text-align: right;
+}
+
+.textBox {
+    border-radius: 15px;
+}
+
+#tblSkissSet th, td {
+    border-right: 0;
+}
+
+.buttonLink {
+    background: none !important;
+    color: blue;
+    border: none;
+    padding: 0 !important;
+    font-weight: bolder;
+    /*border is optional*/
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+/*.ChcekboxBGColor {
+    margin-top: 0px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    font-size: x-small;
+    margin-right: 4px;
+    width: auto;
+}*/
+
+.btnCommon {
+border-radius:15px;
+display:inline-block;
+}
+
+
+ul.nav.nav-tabs li a {
+    font-size: 12px;
+    
+}
+
+
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+formBorder {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+
+/**Chcek Box***/
+
+/*Common Property*/
+input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label:before {
+        border: 2px solid #000;
+        content: "\00a0";
+        display: inline-block;
+        font: 36px/1em sans-serif;
+        height: 20px;
+        margin: 0 .25em 0 0;
+        padding: 0;
+        vertical-align: top;
+        width: 20px;
+    }
+
+    input[type="checkbox"]:checked + label:before {        
+        color: #000;
+        content: "\2713";
+        text-align: center;
+       font-weight: bolder;
+    }
+   
+   input[type="checkbox"]:checked + label:after {
+        font-weight: bold;
+    }    /*End Common Property*/    /*Individual Property*/    #chkReqPending + label:before {            
+            background: #FF5733;            
+        }
+    #chkReqPending:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkReqDecline + label:before {            
+            background: #D19814;            
+        }
+    #chkReqDecline:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkMessage + label:before {            
+            background: #FFBDD4;            
+        }
+    #chkMessage:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkConfirmed + label:before {            
+            background: #90BE59;            
+        }
+    #chkConfirmed:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkNotStarted + label:before {            
+            background: red;            
+        }
+    #chkNotStarted:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkCancelled + label:before {            
+            background: #006AFF;            
+        }
+    #chkCancelled:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkIncomplete + label:before {            
+            background: #00DAFF;            
+        }
+    #chkIncomplete:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkContractPending + label:before {            
+            background: #FF00FF;            
+        }
+    #chkContractPending:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkPaymentPending + label:before {            
+            background: #20216C;            
+        }
+    #chkPaymentPending:checked + label:before {        
+        color: #fff;       
+    }
+
+
+    #chkBGChkPending + label:before {            
+            background: red;            
+        }
+    #chkBGChkPending:checked + label:before {        
+        color: #fff;       
+    }
+    /*Individual Property*/
+
+/**/

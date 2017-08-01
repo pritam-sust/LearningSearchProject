@@ -1,0 +1,458 @@
+﻿
+
+<ul class="nav nav-tabs ctab">
+    <li id="dashboardTab"><a href="#DashBoard" data-toggle="tab">Dash Board</a></li>
+    <li class="dropdown-toggle" id="memberTab">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Member <span class="caret"></span></a>
+        <ul class="dropdown-menu tabLink">
+            <li><a href="#">Member1</a></li>
+            <li><a href="#">Member2</a></li>
+            <li><a href="#">Member3</a></li>
+        </ul>
+    </li>
+
+    <li id="vehicleTab"><a href="#DashBoard" data-toggle="tab">Vehicles</a></li>
+    <li class="active" id="reservationTab"><a href="#DashBoard" data-toggle="tab">Reservation</a></li>
+    <li id="rentalsTab"><a href="#DashBoard" data-toggle="tab">Rentals</a></li>
+    <li id="billingTab"><a href="#DashBoard" data-toggle="tab">Billing</a></li>
+    <li id="reportTab"><a href="#DashBoard" data-toggle="tab">Report</a></li>
+    <li id="maintenanceTab"><a href="#DashBoard" data-toggle="tab">Maintenance</a></li>
+    <li id="complaintsTab"><a href="#DashBoard" data-toggle="tab">Complaints</a></li>
+    <li id="birdsEyeViewTab"><a href="#DashBoard" data-toggle="tab">Birds Eye View</a></li>
+    <li id="implementationTab"><a href="#DashBoard" data-toggle="tab">Implementation</a></li>
+    <li class="dropdown-toggle" id="Settings">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+        <ul class="dropdown-menu tabLink">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+        </ul>
+    </li>
+    <li class="dropdown-toggle pull-right" id="History">
+        <a href="#" class="dropdown-toggle history" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><i class="fa fa-hourglass-half"></i> </span>History <span class="caret"></span></a>
+        <ul class="dropdown-menu tabLink">
+            <li><a href="#">History</a></li>
+            <li><a href="#">History action</a></li>
+            <li><a href="#">History else here</a></li>
+        </ul>
+    </li>
+</ul>
+
+
+<div class="container-fluid">
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="DashBoard">
+            <div class="row">
+                <div class="col-md-8">
+                    <button type="button" class="buttonLink" id="btnReserve" style="margin-top:10px; color:blue;"> New Reservation </button>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-offset-2 col-md-5 pull-right export">
+                        <label>Export To</label>
+                        <button type="button" class="btn btn-success btn-xs" id="btnCsv"> CSV </button>
+                        <button type="button" class="btn btn-success btn-xs" id="btnXls"> XLS </button>
+                        <button type="button" class="btn btn-danger btn-xs" id="btnPdf"> PDF </button>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="well" style="margin-top:10px;">
+
+                <form name="frmSearch" id="frmSearchDashBoard" class="form-horizontal" action="javascript:;">
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group bas">
+                                <label class="col-sm-2 control-label">&nbsp;</label>
+                                <div class="col-md-10">
+
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1"><label for="inlineRadio1">Date Created</label>
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" checked="checked"><label for="inlineRadio2">Reservation Date</label>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-2 control-label">From:</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group date" data-provide="datepicker">
+                                        <input type="text" class="form-control textBox" value="@(string.Format("{0:MM-dd-yyyy}",DateTime.Now))">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group bootstrap-timepicker timepicker timePick">
+                                        <input type="text" class="form-control input-small tpicker textBox">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-2 control-label">To:</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group date" data-provide="datepicker">
+                                        <input type="text" class="form-control textBox">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group bootstrap-timepicker timepicker timePick">
+                                        <input type="text" class="form-control input-small tpicker textBox">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group bas">
+                                <label for="" class="col-sm-4 control-label">First Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-4 control-label">Last Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-4 control-label">Member ID</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="Member ID">
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-4 control-label">Phone</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group bas">
+                                <label for="" class="col-sm-5 control-label">Reservation Code</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="Reservation Code">
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-5 control-label">FoxPress</label>
+                                <div class="col-sm-7">
+                                    <select class="form-control input-sm textBox">
+                                        <option> All</option>
+                                        <option> FoxPress2</option>
+                                        <option> FoxPress3</option>
+                                        <option> FoxPress4</option>
+                                        <option> FoxPress5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-5 control-label">Voucher</label>
+                                <div class="col-sm-7">
+                                    <select class="form-control input-sm textBox">
+                                        <option> All</option>
+                                        <option> Voucher1</option>
+                                        <option> Voucher2</option>
+                                        <option> Voucher3</option>
+                                        <option> Voucher4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-5 control-label">Add Ons</label>
+                                <div class="col-sm-7">
+                                    <select class="form-control input-sm textBox">
+                                        <option> All</option>
+                                        <option> Add Ons1</option>
+                                        <option> Add Ons2</option>
+                                        <option> Add Ons3</option>
+                                        <option> Add Ons4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group bas">
+                                <label for="" class="col-sm-5 control-label">Pickup Location</label>
+                                <div class="col-sm-7">
+                                    <select class="form-control input-sm textBox">
+                                        <option> Any Location</option>
+                                        <option> Los Angel Airport2</option>
+                                        <option> Los Angel Airport3</option>
+                                        <option> Los Angel Airport4</option>
+                                        <option> Los Angel Airport5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-5 control-label">Vehicle Id</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control input-sm textBox" placeholder="Vehicle Id">
+                                </div>
+                            </div>
+                            <div class="form-group adv">
+                                <label for="" class="col-sm-5 control-label">Vehicle Category</label>
+                                <div class="col-sm-7">
+                                    <select class="form-control input-sm textBox">
+                                        <option> All</option>
+                                        <option> Vehicle Category2</option>
+                                        <option> Vehicle Category3</option>
+                                        <option> Vehicle Category4</option>
+                                        <option> Vehicle Category5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <button class="btn btn-success btn-sm btnCommon" type="button" id="btnAdv" value="1"><i class="fa fa-search-plus"></i>Advance</button>
+                            @*<button class="btn btn-info btn-sm btnCommon" type="button" id="Search" onclick="location.href='@Url.Action("index", "Search" )'">   <i class="fa fa-search"></i>&nbsp;Search</button>*@
+                            <a class="btn btn-info btn-sm btnCommon" type="button" id="Search" onclick="location.href='@Url.Action("index", "Search" )'">   <i class="fa fa-search"></i>&nbsp;Search</a>
+
+                            <button id="BtnResetForm" class="btn btn-primary btn-sm btnCommon" type="button"><i class="fa fa-refresh"></i>&nbsp;Reset</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+           <div class="row" style="margin-bottom:30px;">
+                <div class="col-md-1 input-sm">
+                    <label>
+                        Filter Result By:
+
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">                    
+                        <input type="checkbox" class="ChcekboxBGColor" value="" id="chkReqPending" />
+                    <label for="chkReqPending">
+                        Req. Pending
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">                    
+                    <input type="checkbox" class="checkControl" value="" id="chkReqDecline" onclick="location.href='@Url.Action("index", "Search" )'" />
+                    <label for="chkReqDecline">
+                        Req. Decline
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">                    
+                    <input type="checkbox" class="checkControl" value="" id="chkMessage" onclick="location.href='@Url.Action("index", "Search" )'" />
+                    <label for="chkMessage">
+                        Message
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkConfirmed" onclick="location.href='@Url.Action("index", "Search" )'"/>
+                    <label for="chkConfirmed">
+                        Confirmed
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkNotStarted" onclick="location.href='@Url.Action("index", "Search" )'"/>
+                    <label for="chkNotStarted">
+                        Not Started
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkCancelled" onclick="location.href='@Url.Action("index", "Search" )'"/>
+                    <label for="chkCancelled">
+                        Cancelled
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkIncomplete" onclick="location.href='@Url.Action("index", "Search" )'"/>
+                    <label for="chkIncomplete">
+                        Incomplete
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkContractPending" onclick="location.href='@Url.Action("index", "Search" )'" />
+                    <label for="chkContractPending">
+                        Contract Pending
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkPaymentPending" onclick="location.href='@Url.Action("index", "Search" )'"/>
+                    <label for="chkPaymentPending">
+                        Payment Pending
+                    </label>
+                </div>
+
+                <div class="col-md-1 input-sm ">
+                    <input type="checkbox" class="checkControl" value="" id="chkBGChkPending" onclick="location.href='@Url.Action("index", "Search" )'"/>
+                    <label for="chkBGChkPending">
+                        Bg.Chk Pending
+                    </label>
+                </div>
+                <div class="col-md-1 input-sm">
+                    <button type="button" class="buttonLink" id="btnSelect"> SelectAll </button>
+                    <button type="button" class="buttonLink" id="btnReset">Reset All</button>
+                </div>
+            </div>
+
+            <div style="border:1px solid #ccc; padding:10px 5px; border-radius:8px;">
+                <table class="table table-bordered table-striped input-sm table-condensed" id="DataListTable">
+                    <thead>
+                        <tr class="tableColumn">
+                            <th class="th" style="width:60px;"> </th>
+                            <th class="th">DateCreated</th>
+                            <th class="th">ReservationCode</th>
+                            <th class="th">ExternalCode</th>
+                            <th class="th">ReservationStatus</th>
+                            <th class="th">MemberName</th>
+                            <th class="th">VehicalId</th>
+                            <th class="th">Category</th>
+                            <th class="th">VehicalInfo</th>
+                            <th class="th">OwnerName</th>
+                            <th class="th">StartDate</th>
+                            <th class="th">StartTime</th>
+                            <th class="th">EndDate</th>
+                            <th class="th">EndTime</th>
+                            <th class="th">PickupLocation</th>
+                            <th class="th">TotalAmount</th>
+                            <th class="th">Balance</th>
+                        </tr>
+                    </thead>                    
+                </table>
+            </div>
+
+        </div>
+
+        <div class="tab-pane" id="member">
+            <fieldset>
+                <div class="row-fluid">
+                    Member
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Vehicle">
+            <fieldset>
+                <div class="row-fluid">
+                    Vehicle
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Reservation">
+            <fieldset>
+                <div class="row-fluid">
+                    Reservation
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Rentals">
+            <fieldset>
+                <div class="row-fluid">
+                    Rentals
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Billing">
+            <fieldset>
+                <div class="row-fluid">
+                    Billing
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Report">
+            <fieldset>
+                <div class="row-fluid">
+                    Report
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Maintenance">
+            <fieldset>
+                <div class="row-fluid">
+                    Maintenance
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Complaints">
+            <fieldset>
+                <div class="row-fluid">
+                    Complaints
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="BirdsEyeView">
+            <fieldset>
+                <div class="row-fluid">
+                    Birds Eye View
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Implementation">
+            <fieldset>
+                <div class="row-fluid">
+                    Implementation
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="tab-pane" id="Settings">
+            <fieldset>
+                <div class="row-fluid">
+                    Settings
+                </div>
+            </fieldset>
+        </div>
+
+
+    </div>
+</div>
+
+@*Modal to Check Reservation Link*@
+<div class="modal fade" id="reserveModal" role="dialog">
+    <div class="modal-dialog modal-sm vertical-align-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">New Reservation</h4>
+            </div>
+            <div class="modal-body">
+                New reservation content
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

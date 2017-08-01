@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ReservationId" />
+    </Key>
+    <Property Name="ReservationId" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="ReservationCode" Type="nchar" MaxLength="20" />
+    <Property Name="ExternalCode" Type="nchar" MaxLength="20" />
+    <Property Name="ReservationStatus" Type="varchar" MaxLength="50" />
+    <Property Name="MemberName" Type="varchar" MaxLength="50" />
+    <Property Name="VehicalId" Type="nchar" MaxLength="20" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="VehicalInfo" Type="varchar" MaxLength="50" />
+    <Property Name="OwnerName" Type="varchar" MaxLength="50" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndDate" Type="date" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="PickupLocation" Type="varchar" MaxLength="50" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="MyDatabaseModelStoreContainer">
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

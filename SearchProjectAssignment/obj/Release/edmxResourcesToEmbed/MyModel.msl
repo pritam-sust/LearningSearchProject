@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyDatabaseModelStoreContainer" CdmEntityContainer="MyDatabaseEntities">
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="MyDatabaseModel.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PickupLocation" ColumnName="PickupLocation" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="VehicalInfo" ColumnName="VehicalInfo" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="VehicalId" ColumnName="VehicalId" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="ReservationStatus" ColumnName="ReservationStatus" />
+          <ScalarProperty Name="ExternalCode" ColumnName="ExternalCode" />
+          <ScalarProperty Name="ReservationCode" ColumnName="ReservationCode" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
